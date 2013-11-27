@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="new-note">
+    <h1><%= title %></h1>
+    <form action="/create" method="POST">
+        <% if (errors.content) { %>
+        <span style="color: red"><%= errors.content.msg %></span>
+        <% } %>
+
+        <textarea name="content" value="<%= content %>"></textarea>
+        <button>Save</button>
+    </form>
+  </body>
+</html>

@@ -6,6 +6,15 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <a href="/new">New note</a>
+    <% if (notes.length > 0) { %>
+    <ul>
+        <% notes.forEach(function(note) { %>
+        <li><%= note.title %></li>
+        <% }); %>
+    </ul>
+    <% } else { %>
+    <p>No notes</p>
+    <% } %>
   </body>
 </html>
