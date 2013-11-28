@@ -3,21 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "test": "./node_modules/mocha/bin/_mocha -R spec tests/*.js"
   },
   "dependencies": {
     "express": "3.4.4",
     "ejs": "*",
     "less-middleware": "*",
     "mongoose": "3.8.1",
-    "express-validator": "~1.0.1"
+    "express-validator": "~1.0.1",
+    "connect-timeout": "0.0.1"
   },
   "devDependencies": {
     "sinon": "1.7.3",
     "should": "2.1.0",
     "mocha": "1.14.0"
-  },
-  "scripts": {
-      "test": "./node_modules/mocha/bin/_mocha -R spec tests/*.js"
   }
 }

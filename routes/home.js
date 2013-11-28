@@ -3,7 +3,11 @@ var models = require("../models"),
 
 exports.index = function(req, res){
     models.Note.find(function (err, notes) {
-        res.render('index', { title: 'Notes', notes: notes });
+        if (err) {
+            res.render('error', { title: 'Error', message: 'Database error' });
+        } else {
+            res.render('index', { title: 'Notes', notes: notes });
+        }
     });
 };
 
